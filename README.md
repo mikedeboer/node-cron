@@ -12,9 +12,9 @@ Additionally, this library goes beyond the basic cron syntax and allows you to s
 Usage:
 ==========
 
-    var cronJob = require('cron').CronJob;
-    cronJob('* * * * * *', function(){
-        console.log('You will see this message every second');
+    var cronJob = require("cron").CronJob;
+    cronJob("* * * * * *", function(){
+        console.log("You will see this message every second");
     });
     
 
@@ -30,8 +30,8 @@ Available Cron patterns:
 Another example
 ==========
 
-    var cronJob = require('cron').CronJob;
-   cronJob('00 30 11 * * 2-6', function(){
+    var cronJob = require("cron").CronJob;
+    cronJob("00 30 11 * * 2-6", function(){
         // Runs every weekday (Monday through Friday)
         // at 11:30:00 AM. It does not run on Saturday
         // or Sunday.
@@ -40,18 +40,19 @@ Another example
 How to check if a cron pattern is valid:
 ==========
 
-		try {
-			cronJob('invalid cron pattern', function() {
-				console.log('this should not be printed');
-			})
-		} catch(ex) {
-			console.log("cron pattern not valid");
-		}
+    try {
+        cronJob("invalid cron pattern", function() {
+            console.log("this should not be printed");
+        })
+    }
+    catch (ex) {
+        console.log("cron pattern not valid");
+    }
 
 Install
 ==========
-    From source: `sudo npm install`
-    From npm: `sudo npm install cron`
+    From source: `npm install`
+    From npm: `npm install cron`
 
 Contributors
 ===========
